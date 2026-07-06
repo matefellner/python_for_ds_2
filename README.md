@@ -8,11 +8,12 @@ week is a self-contained Jupyter notebook mixing explanations with runnable exam
 ```bash
 conda create -n pyds python=3.11
 conda activate pyds
-pip install numpy pandas matplotlib scipy scikit-learn networkx xgboost seaborn folium jupyter
+pip install numpy pandas matplotlib scipy scikit-learn networkx xgboost seaborn folium transformers jupyter
 ```
 
 The notebooks are kept working on current library versions (pandas 2/3, NumPy 2,
-scikit-learn 1.6, networkx 3.5, xgboost 3).
+scikit-learn 1.6, networkx 3.5, xgboost 3). Week 8's tokenization demo downloads the
+GPT-2 tokenizer (~2 MB) from HuggingFace on first run, then caches it.
 
 Notebook outputs are stripped from git via [nbstripout](https://github.com/kynan/nbstripout)
 (see `.gitattributes`). After cloning, enable the filter once so your commits stay clean:
@@ -42,7 +43,7 @@ cd data && unrar x "IMDB Dataset.rar"   # or: unar "IMDB Dataset.rar"
 | Week 5 – Matplotlib | Figures/axes, common chart types, labels and legends |
 | Week 6 – SciPy | Integration, interpolation, optimization, FFT |
 | Week 7 – NetworkX | Graph construction, attributes, built-in algorithms |
-| Week 8 – Regression & classification | scikit-learn: train/test split, metrics, baselines |
+| Week 8 – Regression & classification | scikit-learn: train/test split, metrics, baselines; text tokenization for LLMs |
 | Week 9 – XGBoost | Gradient boosting for regression and classification |
 | EDA example | Worked exploratory analysis (Pima diabetes dataset) |
 
