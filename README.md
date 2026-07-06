@@ -14,6 +14,13 @@ pip install numpy pandas matplotlib scipy scikit-learn networkx xgboost seaborn 
 The notebooks are kept working on current library versions (pandas 2/3, NumPy 2,
 scikit-learn 1.6, networkx 3.5, xgboost 3).
 
+Notebook outputs are stripped from git via [nbstripout](https://github.com/kynan/nbstripout)
+(see `.gitattributes`). After cloning, enable the filter once so your commits stay clean:
+
+```bash
+pip install nbstripout && nbstripout --install
+```
+
 ## Data
 
 CSVs live in `data/` and are loaded with a `data/...` relative path, so run Jupyter
